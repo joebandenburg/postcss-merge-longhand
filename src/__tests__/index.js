@@ -70,6 +70,10 @@ let tests = [{
     fixture: 'h1{border-color:red;border-width:1px 5px;border-style:dashed}',
     expected: 'h1{border-color:red;border-width:1px 5px;border-style:dashed}',
 }, {
+    message: 'should not merge border with one or more inherit values',
+    fixture: 'h1{border-color:inherit;border-width:1px;border-style:dashed}',
+    expected: 'h1{border-color:inherit;border-width:1px;border-style:dashed}',
+}, {
     message: 'should convert 4 values to 1',
     fixture: 'h1{margin:10px 10px 10px 10px}',
     expected: 'h1{margin:10px}'
